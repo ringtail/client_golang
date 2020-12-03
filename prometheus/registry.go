@@ -58,11 +58,6 @@ var (
 	DefaultGatherer   Gatherer   = defaultRegistry
 )
 
-func init() {
-	MustRegister(NewProcessCollector(ProcessCollectorOpts{}))
-	MustRegister(NewGoCollector())
-}
-
 // NewRegistry creates a new vanilla Registry without any Collectors
 // pre-registered.
 func NewRegistry() *Registry {
